@@ -1,40 +1,11 @@
-const person: {
-  name: string,
-  age: number,
-  hobbies: string[],
-  role: [number, string], //tuple
-} = {
-//const person = {
-  name: 'Maximilian',
-  age: 30,
-  hobbies: ['Sports', 'Cooking'],
-  role: [2, 'author'],
-};
-
-enum Role {
-  ADMIN = 5,
-  READ_ONLY = 100,
-  AUTHOR = 'AUTHOR'
-};
-
-const personEnum = {
-  name: 'Maximilian',
-  age: 30,
-  hobbies: ['Sports', 'Cooking'],
-  role: Role.ADMIN
-};
-
-if (person.role === Role.ADMIN){
-  console.log('is ADMIN');
+function combine(input1: number|string, input2: number|string) {
+  if(typeof input1 === 'number' && typeof input2 === 'number'){
+    return  input1 + input2;
+  }
+  else{
+    return  input1.toString() + input2.toString();
+  }
 }
 
-//person.role.push('admin'); error, but doesn't catch
-//person.role[1] = 10; //Error
-
-let favouritesActivities: any[];
-favouritesActivities = ['Sports', 1,];
-
- for(const hobby of person.hobbies){
-   console.log(hobby.toUpperCase());
-   //console.log(hobby.map()); // !!! ERROR !!!
- }
+console.log('Combined Ages:', combine(30, 26));
+console.log('Combined Names:', combine('Max', 'Anna'));
