@@ -1,10 +1,16 @@
 const person: {
-  name: string,
+/*  name: string,
   age: number,
-  nickname?: string,
-} = {
+} = {*/
   name: 'Maximilian',
-  age: 30
+  age: 30,
+  hobbies: ['Sports', 'Cooking']
 };
 
-console.log(person.nickname);
+let favouritesActivities: any[];
+favouritesActivities = ['Sports', 1,];
+
+ for(const hobby of personal.hobbies){
+   console.log(hobby.toUpperCase());
+   console.log(hobby.map()); // !!! ERROR !!!
+ }
