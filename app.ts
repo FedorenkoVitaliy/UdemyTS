@@ -1,19 +1,9 @@
-type Combinable = number | string;
-type ConversionDescriptor = 'as-number' | 'as-text';
-
-function combine(
-  input1: Combinable,
-  input2: Combinable,
-  resultConversion: ConversionDescriptor
-) {
-  if(typeof input1 === 'number' && typeof input2 === 'number' || resultConversion === 'as-number'){
-    return + input1 +  + input2;
-  }
-  else{
-    return input1.toString() + input2.toString();
-  }
+function add(n1:number, n2: number): number {
+  return n1 + n2;
 }
 
-console.log('Combined Ages:', combine(30, 26, 'as-number'));
-console.log('Combined String Ages:', combine('30', '26', 'as-number'));
-console.log('Combined Names:', combine('Max', 'Anna', 'as-text'));
+function printResult(num:number): void {//not undefined, because undefined means well be return
+  console.log('Result', num);
+}
+
+printResult(add(5,12));
