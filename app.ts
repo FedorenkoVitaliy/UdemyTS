@@ -11,6 +11,23 @@ const person: {
   role: [2, 'author'],
 };
 
+enum Role {
+  ADMIN = 5,
+  READ_ONLY = 100,
+  AUTHOR = 'AUTHOR'
+};
+
+const personEnum = {
+  name: 'Maximilian',
+  age: 30,
+  hobbies: ['Sports', 'Cooking'],
+  role: Role.ADMIN
+};
+
+if (person.role === Role.ADMIN){
+  console.log('is ADMIN');
+}
+
 //person.role.push('admin'); error, but doesn't catch
 //person.role[1] = 10; //Error
 
